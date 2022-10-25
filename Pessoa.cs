@@ -4,25 +4,20 @@
     private char sexo;
     private int id;
     private static int numero = 202201500; //crio um número de matrícula padrão, deixando cada objeto com um id único a partir do incremento desse
-    public string Nome
+
+
+    /*public string Nome
     {
         get { return nome; }
         set { nome = value; }
-    }
-    public char Sexo
-    {
-        get { return sexo; }
-        set { sexo = value; }
-    }
+    }*/
+
+    public string Nome { get; set; } // mesma coisa ???
+    public char Sexo { get; set; }
+    public int Id { get; set; }
     public override int GetHashCode()
     {
         return this.Nome.GetHashCode() * 17; //multiplica o hashcode por um número primo para diminuir colisões
-    }
-   
-    public int Id
-    {
-        get { return id; }
-        set { id = value; }
     }
 
     public Pessoa(string nome, int id)

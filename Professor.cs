@@ -9,16 +9,8 @@ class Professor : Pessoa
 
         return "Nome: " + Nome + " | Matéria: " + Materia;
     }
-    public double TaxaAprovacao
-    {
-        get { return taxaAprovacao; }
-        set { taxaAprovacao = value; }
-    }
-    public string Materia
-    {
-        get { return materia; }
-        set { materia = value; }
-    }
+    public double TaxaAprovacao { get; set; }
+    public string Materia { get; set; }
 
 
     public Professor(double taxaAprovacao)

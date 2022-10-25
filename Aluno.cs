@@ -8,29 +8,10 @@
     private double[] notas;
     private char turma;
     private string escolaNome;
-    public double[] Notas
-    {
+    public double[] Notas { get; set; }
+    public char Turma { get; set; }
+    public string EscolaNome { get; set; }
 
-        get { return notas; }
-        set { notas = value; }
-
-    }
-
-    public char Turma
-    {
-
-        get { return turma; }
-        set { turma = value; }
-
-    }
-
-    public string EscolaNome
-    {
-
-        get { return escolaNome; }
-        set { escolaNome = value; }
-
-    }
     public Aluno(string nome, double[] notas, char turma, string escolaNome)
     {
         Nome = nome;
