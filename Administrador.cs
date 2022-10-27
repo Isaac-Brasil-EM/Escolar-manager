@@ -29,8 +29,7 @@
 
                 Console.WriteLine("Insira o nome do aluno: " + (i + 1));
                 p.Nome = Console.ReadLine().ToUpper();// UPCASTING lê o nome do aluno que é pessoa
-
-                if (ChecaExistenciaAluno(alunos, p.Nome.GetHashCode()))
+                if (ChecaExistenciaAluno(alunos, p.Id.GetHashCode()))
                 {
                     break;
                 }
@@ -62,8 +61,6 @@
                     newAluno.EscolaNome = Console.ReadLine().ToUpper();
 
                     alunos.Add(newAluno); //adiciona o novo aluno na lista alunos
-
-
 
                     int indexMedia = 0;
 
@@ -110,7 +107,7 @@
                 Professor newProf = new();
                 Console.WriteLine("Insira o nome do professor: " + (i + 1));
                 newProf.Nome = Console.ReadLine().ToUpper();
-                if (ChecaExistenciaProf(professores, newProf.Nome.GetHashCode()))
+                if (ChecaExistenciaProf(professores, newProf.Id.GetHashCode()))
                 {
                     break;
                 }
@@ -148,12 +145,12 @@
 
     }
 
-    public static bool ChecaExistenciaAluno(List<Aluno> alunos, int hashNome) // checa se já existe um hashcode na lista alunos
+    public static bool ChecaExistenciaAluno(List<Aluno> alunos, int hashId) // checa se já existe um hashcode na lista alunos
     {
         foreach (Aluno aluno in alunos)
         {
-            int hash = aluno.Nome.GetHashCode();
-            if (hash.Equals(hashNome))
+            int hash = aluno.Id.GetHashCode();
+            if (hash.Equals(hashId))
             {
                 Console.WriteLine("");
                 Console.BackgroundColor = ConsoleColor.Green;
@@ -166,12 +163,12 @@
 
         return false;
     }
-    public static bool ChecaExistenciaProf(List<Professor> professores, int hashNome) // checa se já existe um hashcode na lista professores
+    public static bool ChecaExistenciaProf(List<Professor> professores, int hashId) // checa se já existe um hashcode na lista professores
     {
         foreach (Professor prof in professores)
         {
-            int hash = prof.Nome.GetHashCode();
-            if (hash.Equals(hashNome))
+            int hash = prof.Id.GetHashCode();
+            if (hash.Equals(hashId))
             {
                 Console.WriteLine("");
                 Console.BackgroundColor = ConsoleColor.Green;

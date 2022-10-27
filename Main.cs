@@ -158,6 +158,7 @@
             object itemValObj = valorAlimento; // boxing
             object itemQtdeObj = quantidadeItens; // boxing
 
+            
             Produto produtoBoxUnboxing = new((string)itemNomeObj, (double)itemValObj, (int)itemQtdeObj); //unboxing
             itensCantina.Add(produtoBoxUnboxing); //adiciono o novo produto na lista da cantina
 
